@@ -10,9 +10,8 @@ file=files(i);
 ang=angs(i);
 datar=readdat(char(file));
 [t,dataf]=preprocess(datar,k);
-lb=[0,0];
-ub=[inf ,inf];
-systhis=ident_t3(t,dataf,lb,ub);
+
+systhis=ident_t1_2_T(t,dataf);
 sysi=[sysi;systhis];
 subplot(2,4,k);
 plot(t,dataf);hold on;

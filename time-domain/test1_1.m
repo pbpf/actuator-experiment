@@ -10,10 +10,10 @@ for i=1:10
 file=files(i);
 ang=angs(i);
 datar=readdat(char(file));
+%plot(data(101:end,1),data(101:end,6),
 [t,dataf]=preprocess(datar,k);
-lb=[0.1 0];
-ub=[1.5 inf];
-systhis=ident_t2(t,dataf,lb,ub);
+
+systhis=ident_t1_1(t,dataf);
 sysi=[sysi;systhis];
 subplot(2,4,k);
 plot(t,dataf);hold on;
@@ -35,3 +35,4 @@ end
 end
 sys=[sys,sysi];
 end
+
