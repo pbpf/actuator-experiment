@@ -6,5 +6,5 @@
     -  辨识 $G(s)=\frac{K e^{-s T}}{1+a_1 s}$
 16. test1_2
     -  辨识 $G(s)=\frac{1}{1+a_1 s+a_2 s^2}$    
-16. test1_2
+16. test1_2_T
     -  辨识 $G(s)=\frac{e^{-s T}}{1+a_1 s+a_2 s^2}$       
