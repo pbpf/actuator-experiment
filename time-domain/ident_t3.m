@@ -28,12 +28,8 @@ end
 function y=yfun3(t,T1,dt)
 
 % assert t2>=t1
-if(dt>1e-5)
-    y=1 + T1/(exp(t/T1)*dt) - (dt + T1)/(exp(t/(dt + T1))*dt);
-else
-    y=1 - exp(-(t/T1)) - (dt*t^2)/(exp(t/T1)*(2*T1^3)) - t/(exp(t/T1)*T1);
-end
-
+    %y=1 - exp(-(t/T1)) - (dt*t^2)/(exp(t/T1)*(2*T1^3)) - t/(exp(t/T1)*T1);
+     y=1 + T1/(exp(t/T1)*dt) - (dt + T1)/(exp(t/(dt + T1))*dt);
 % if(t<=0)
 %     y=0;
 % else
