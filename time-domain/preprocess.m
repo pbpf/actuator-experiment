@@ -1,12 +1,14 @@
 function [t,fdata]=preprocess(data,which)
 %对witch 通道预处理
 data2=removezero(data);
-[data3,start,errallow]=normalization(data2(:,5+which));
+data3=normalization(data2(:,5+which));
 findex=timeline_filter(data3,start,0.4,20,errallow);
 t1=data2(31:end,1);
 t=t1(findex);
 t=t-t(1);
 fdata=data3(findex);
+% fdata=medfilt1(data3,20);
+% t=data2(31:end,1);
 end
 
 function data=removezero(datar)
